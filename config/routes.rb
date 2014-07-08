@@ -3,6 +3,8 @@ Testproducts::Application.routes.draw do
 
   resources :products
 
+  #decProduct method is mapped to controller#action
+  #decrement prefix is added for convenient linking
   scope 'method', as: 'decrement' do
     put "products/:id/decProduct"  => "products#decProduct"
   end
